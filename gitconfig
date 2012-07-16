@@ -1,0 +1,19 @@
+[user]
+	name = Stian Hegglund
+	email = stian.hegglund@gmail.com
+[alias]
+	last = log -1 HEAD
+	unstage = reset HEAD --
+	lg=log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[color]
+	ui = true
+[core]
+	excludesfile = /Users/stianh/.gitignore
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[mergetool]
+	keepBackup = true

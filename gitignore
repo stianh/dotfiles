@@ -1,0 +1,29 @@
+# Ignore all IntelliJ IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.ids
+
+#eclipse
+.settings/
+bin/
+classes/
+gen/
+.classpath
+.project
+jarlist.cache
+# Ignore Maven target directories
+target/
+out/
+build/
+.chef/
+.gradle/
+# Ignore all log files
+*.log
+
+# Ignore .DS_Store files
+.DS_Store
+node_modules/
+.gems
+~     
