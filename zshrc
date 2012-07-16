@@ -21,14 +21,14 @@ source $ZSH/oh-my-zsh.sh
 export NODE_PATH=/usr/local/lib/node_modules
 export JDK_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export JAVA_HOME=$JDK_HOME
-export DEV_HOME="~/dev"
+export DEV_HOME="$HOME/dev"
 export ANDROID_HOME="$DEV_HOME/tools/android-sdk"
 export MAVEN_HOME="$DEV_HOME/tools/maven"
 export GROOVY_HOME="$DEV_HOME/lang/groovy"
 export GRADLE_HOME="$DEV_HOME/tools/gradle"
 export MAVEN_OPTS=-Xmx512m
 export GRADLE_OPTS="-Xmx1024m -Xms256m -XX:MaxPermSize=512m -XX:+CMSClassUnloadingEnabled -XX:+HeapDumpOnOutOfMemoryError"
-export REBEL_HOME="~/dev/tools/jrebel"
+export REBEL_HOME="$HOME/dev/tools/jrebel"
 
 # Customize to your needs...
 export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$DEV_HOME/lang/scala/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$GROOVY_HOME/bin:$DEV_HOME/tools/sbt/:$DEV_HOME/tools/android-sdk/tools:$DEV_HOME/tools/android-sdk/platform-tools:$DEV_HOME/tools/play:$DEV_HOME/tools/grails/bin
@@ -51,6 +51,6 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 
-[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
