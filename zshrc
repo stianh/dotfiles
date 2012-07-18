@@ -1,4 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
+DISABLE_AUTO_TITLE=true
 unsetopt correct_all
 export ZSH_THEME="miloshadzic"
 export EDITOR='subl -w'
