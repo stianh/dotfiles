@@ -9,6 +9,7 @@
 	ui = true
 [core]
 	excludesfile = /Users/stianh/.gitignore
+	editor = subl -w
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
