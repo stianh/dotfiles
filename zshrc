@@ -16,7 +16,7 @@ export BYOBU_PREFIX=$(brew --prefix)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew git osx svn textmate autojump)
+plugins=(brew git osx svn textmate autojump ruby rails3 bundler)
 source $ZSH/oh-my-zsh.sh
 
 export NODE_PATH=/usr/local/lib/node_modules
@@ -32,7 +32,7 @@ export GRADLE_OPTS="-Xmx1024m -Xms256m -XX:MaxPermSize=512m -XX:+CMSClassUnloadi
 export REBEL_HOME="$HOME/dev/tools/jrebel"
 
 # Customize to your needs...
-export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$DEV_HOME/lang/scala/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$GROOVY_HOME/bin:$DEV_HOME/tools/sbt/:$DEV_HOME/tools/android-sdk/tools:$DEV_HOME/tools/android-sdk/platform-tools:$DEV_HOME/tools/play:$DEV_HOME/tools/grails/bin
+export PATH=$HOME/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$DEV_HOME/lang/scala/bin:$MAVEN_HOME/bin:$GRADLE_HOME/bin:$GROOVY_HOME/bin:$DEV_HOME/tools/sbt/:$DEV_HOME/tools/android-sdk/tools:$DEV_HOME/tools/android-sdk/platform-tools:$DEV_HOME/tools/play:$DEV_HOME/tools/grails/bin:/usr/local/share/npm/bin
 #Pretty man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -51,7 +51,7 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 	  . `brew --prefix`/etc/autojump
 fi
 
-source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(rbenv init -)"
 
 export PATH=$PATH:/Users/stianh/.rbenv/shims
