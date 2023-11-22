@@ -14,6 +14,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
+bindkey -s ^f "tmux-sessionizer\n"
 
 alias python=python3
 alias vi=nvim 
@@ -24,4 +25,23 @@ if [ -f '/Users/sthe99/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sthe99/g
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/sthe99/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sthe99/google-cloud-sdk/completion.zsh.inc'; fi
 
-source .env
+
+function cd() {
+  builtin cd "$@"
+
+  if [[ -z "$VIRTUAL_ENV" ]] ; then
+    ## If env folder is found then activate the vitualenv
+      if [[ -d ./.venv ]] ; then
+        source ./.venv/bin/activate
+      fi
+  else
+    ## check the current folder belong to earlier VIRTUAL_ENV folder
+    # if yes then do nothing
+    # else deactivate
+      parentdir="$(dirname "$VIRTUAL_ENV")"
+      if [[ "$PWD"/ != "$parentdir"/* ]] ; then
+        deactivate
+      fi
+  fi
+}
+source ~/.env
