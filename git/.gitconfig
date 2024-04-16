@@ -1,6 +1,6 @@
 [user]
 	name = Stian Hegglund
-	email = stian.hegglund@gmail.com
+	email = stian.hegglund@protectorforsikring.no
 [alias]
 	last = log -1 HEAD
 	unstage = reset HEAD --
