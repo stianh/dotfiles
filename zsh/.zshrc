@@ -1,21 +1,15 @@
 export PATH=$PATH:/Users/sthe99/go/bin:'/Applications/IntelliJ IDEA.app/Contents/MacOS'
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git golang)
 source $ZSH/oh-my-zsh.sh
 #bindkey -v
-#Pretty man pages
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
 
 bindkey -s ^f "tmux-sessionizer\n"
-
+alias ghf="gh repo list -L 300 protectorinsurance"
 alias python=python3
 alias vi=nvim 
 alias vim=nvim
@@ -46,10 +40,10 @@ function cd() {
 }
 source ~/.env
 
-# Add JBang to environment
-alias j!=jbang
-export PATH="$HOME/.jbang/bin:$PATH"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
